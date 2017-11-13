@@ -32,7 +32,7 @@ namespace TechJobsConsole
             {
                 string aValue = job[column];
 
-                if (!values.Contains(aValue, StringComparison.OrdinalIgnoreCase))
+                if (!values.Contains(aValue))
                 {
                     values.Add(aValue);
                 }
@@ -51,7 +51,7 @@ namespace TechJobsConsole
             {
                 string aValue = row[column];
 
-                if (aValue.Contains(value, StringComparison.OrdinalIgnoreCase))
+                if (aValue.ToLower().Contains(value.ToLower()))
                 {
                     jobs.Add(row);
                 }
